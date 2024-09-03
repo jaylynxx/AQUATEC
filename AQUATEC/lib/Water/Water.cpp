@@ -5,14 +5,14 @@
 
 Water::Water() {}
 
-Water::~Water() {}
+Water::~Water(){}
 
-bool Water::isPotable()
-{
-    if (pHLevel > pHLevelthreshold + .5 || pHLevel < pHLevelthreshold - .5 || TDS > TDSthreshold + 175 || TDS < TDSthreshold - 175)
+    bool Water::isPotable() const
     {
-        return false;
-        else return true;
+        const auto isPHLevelOutOfRange = pHLevel > pHLevelThreshold + 0.5 || pHLevel < pHLevelThreshold - 0.5;
+        const auto isTDSSOutOfRange = TDS > TDSthreshold + 175 || TDS < TDSthreshold - 175;
+
+        return !(isPHLevelOutOfRange || isTDSSOutOfRange);
     }
-}
+
 #endif

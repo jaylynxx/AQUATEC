@@ -5,6 +5,10 @@
  */
 
 #include <Arduino.h>
+#include "Abstraction.h"
+#include "AQUATECControl.h"
+
+AQUATECControl aquatecControl;
 
 void setup()
 {

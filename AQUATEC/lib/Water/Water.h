@@ -1,8 +1,9 @@
-#ifndef Water_h
-#define Water_h
+#ifndef WATER_H
+#define WATER_H
 
+#include "State.h"
 
-class Water
+class Water : public State
 {
 private:
     /* data */
@@ -10,7 +11,7 @@ private:
     int pHLevel;
     int TDS; // Total Dissolve Sollids
     int Tempthreshold;
-    float pHLevelthreshold;
+    float pHLevelThreshold;
     int TDSthreshold;
 
 public:
@@ -21,6 +22,7 @@ public:
     ~Water();
 
     bool isPotable();
+
 
     int getTemp();
     int setTemp(int Temp);
