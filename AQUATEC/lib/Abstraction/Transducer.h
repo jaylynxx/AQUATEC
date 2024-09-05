@@ -8,9 +8,9 @@ class Transducer : public Device
 private:
     /* data */
 public:
-    virtual ~Transducer();
+    virtual ~Transducer() = 0;
 
-    virtual void transduce();
+    virtual void transduce() = 0;
 };
 
 

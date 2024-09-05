@@ -5,31 +5,35 @@
  * </summary>
  */
 
-#ifndef AQUATECControl_h
-#define AQUATECControl_h
 
 #include "AQUATECControl.h"
-#include "Actuator.h"
-#include "Transducer.h"
-//#include "List.hpp"
 
-AQUATECControl::AQUATECControl(/* args */)
-
-    AQUATECControl::~AQUATECControl()
-
-        void AQUATECControl::update()
+// Constructor
+AQUATECControl::AQUATECControl()
 {
+    //TODO Initialize main control
+    delay(1000);
 }
+
+// Destructor
+AQUATECControl::~AQUATECControl()
+{
+    delay(1000);
+}
+
+Control::~Control() {}
 
 void AQUATECControl::notify()
-
-    void AQUATECControl::attach(Device device)
 {
-    Devices.add(device);
+    delay(1000);
 }
 
-void AQUATECControl::dettach(Device device)
+void AQUATECControl::attach(Device *pdevice)
 {
-    Devices.remove(device);
+    delay(1000);
 }
-#endif
+
+void AQUATECControl::dettach(Device *pdevice)
+{
+    delay(1000);
+}

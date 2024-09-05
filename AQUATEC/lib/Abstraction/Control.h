@@ -18,11 +18,11 @@ class Control
 private:
     /* data */
 public:
-    ~Control();
+    virtual ~Control() = 0;
 
-    virtual void notify();
-    virtual void attach(Device device);
-    virtual void dettach(Device device);
+    virtual void notify() = 0;
+    virtual void attach(Device *pdevice) = 0;
+    virtual void dettach(Device *pdevice) = 0;
 };
 
 

@@ -9,9 +9,9 @@ class Actuator : public Device
 private:
     /* data */
 public:
-    virtual ~Actuator();
+    virtual ~Actuator() = 0;
 
-    virtual void actuate();
+    virtual void actuate() = 0;
 };
 
 

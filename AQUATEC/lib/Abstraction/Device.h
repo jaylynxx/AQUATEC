@@ -6,11 +6,11 @@ class Device
 private:
     /* data */
 public:
-    virtual ~Device();
+    virtual ~Device() = 0;
 
-    virtual void begin();
-    virtual void update();
-    virtual void end();
+    virtual void begin() = 0;
+    virtual void update() = 0;
+    virtual void end() = 0;
 };
 
 #endif

@@ -14,7 +14,7 @@ class AQUATECControl : public Control
 {
 private:
     /* data */
-    Device Devices[10];
+    Device *Devices[10];
     int DeviceCount{0};
     Water waterQuality;
 
@@ -26,8 +26,8 @@ public:
 
     void notify();
 
-    void attach(Device device);
-    void dettach(Device device);
+    void attach(Device *device);
+    void dettach(Device *device);
 
 };
 

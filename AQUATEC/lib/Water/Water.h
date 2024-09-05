@@ -7,40 +7,42 @@ class Water : public State
 {
 private:
     /* data */
-    int Temp;
-    int pHLevel;
-    int TDS; // Total Dissolve Sollids
-    int Tempthreshold;
-    float pHLevelThreshold;
-    int TDSthreshold;
+    int _temp;
+    int _pHLevel;
+    int _TDS; // Total Dissolve Sollids
+    int _tempthreshold;
+    float _pHLevelThreshold;
+    int _TDSthreshold;
 
 public:
     Water(/*
     int Temp;
     int pHLevel:
-    int TDS \\ Total Dissolve Sollids args */) {}
+    int TDS \\ Total Dissolve Solids args */);
     ~Water();
-
+    
     bool isPotable();
 
+    void handle();
 
+//accessors
     int getTemp();
-    int setTemp(int Temp);
+    void setTemp(int temp);
 
     int getpHLevel();
-    int setpHLevel(int pHLevel);
+    void setpHLevel(int pHLevel);
 
     int getTDS(); 
-    int setTDS(int TDS);
+    void setTDS(int TDS);
 
     int getTempthreshold();
-    int setTempthreshold(int Tempthreshold);
+    void setTempthreshold(int tempthreshold);
 
     float getpHLevelthreshold();
-    float setpHLevelthreshold(int pHLevelthreshold);
+    void setpHLevelthreshold(int pHLevelthreshold);
 
     int getTDSthreshold();
-    int setTDSthreshold(int TDSthreshold);
+    void setTDSthreshold(int TDSthreshold);
 
 };
 
